@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import arrow_icon from "../../assets/arrow_icon.svg";
-import './ButtonUp.css'; // без styles
+import './ButtonUp.css'; 
 
-export const ScrollButton = () => {
+export const ScrollButton = ({setMenu}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
@@ -11,6 +11,7 @@ export const ScrollButton = () => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMenu("home");
   };
 
   useEffect(() => {

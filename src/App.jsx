@@ -9,14 +9,15 @@ import Navbar from './Components/Navbar/Navbar'
 import Services from './Components/Services/Services'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useState } from 'react'
 
 function App() {
-
+  const [menu, setMenu] = useState("home");
   return (
     <>
       <ToastContainer/>
-      <Navbar/>
-      <ScrollButton/>
+      <Navbar menu={menu} setMenu={setMenu}/>
+      <ScrollButton setMenu={setMenu}/>
       <Hero/>
       <About/>
       <Services/>
