@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "connect": "Connect with me"
+  },
+  "hero": {
+    "greeting": "I'm Amir,",
+    "position": "frontend developer based in Kyrgyzstan",
+    "connect": "Connect With Me",
+    "resume": "My resume"
+  },
+  "about": {
+    "title": "About me",
+    "desc1": "I completed the Geeks courses on Frontend development which lasted 5 months. Then I interned in the 8th stream of Geeks Pro. Now I'm interning in the 9th stream.",
+    "desc2": "My passion for frontend development is not only reflected in my experience but also in the enthusiasm and dedication I bring to each project.",
+    "skills": {
+      "htmlcss": "HTML & CSS",
+      "react": "React JS",
+      "js": "JavaScript",
+      "ts": "TypeScript",
+      "redux": "Redux Toolkit",
+      "zustand": "Zustand",
+      "rq": "React Query"
+    }
+  },
+  "mywork": {
+    "title": "My latest work",
+    "showMore": "Show More"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "leftTitle": "Let's talk",
+    "leftDesc": "I'm currently available to take on new projects, so feel free to send me a message. You can contact me anytime.",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Write your message here",
+    "submit": "Submit now",
+    "location": "Kyrgyzstan, Bishkek"
+  },
+  "services": {
+  "title": "My Services",
+  "list": [
+    {
+      "s_no": "01",
+      "s_name": "🌐 Development of adaptive websites.",
+      "s_desc": "I create modern and adaptive websites that display perfectly on all devices - from smartphones to desktops."
+    },
+    {
+      "s_no": "02",
+      "s_name": "⚙️ API integration and dynamic interfaces.",
+      "s_desc": "I work with REST API and make websites not only beautiful, but also functional - with dynamic data, interactive elements and animation."
+    },
+    {
+      "s_no": "03",
+      "s_name": "🧩 React.js",
+      "s_desc": "I create fast, scalable, and component-based user interfaces with React.js. I apply best practices and make the code clean, maintainable, and scalable."
+    },
+    {
+      "s_no": "04",
+      "s_name": "🛠️ Redux Toolkit",
+      "s_desc": "I use Redux Toolkit for convenient and efficient application state management. I simplify work with asynchronous requests and storage structure, which is especially important for large projects."
+    },
+    {
+      "s_no": "05",
+      "s_name": "🔄 React Query",
+      "s_desc": "I integrate React Query for convenient work with server data: caching, repeated requests, automatic data updates and excellent work with asynchrony without unnecessary code."
+    },
+    {
+      "s_no": "06",
+      "s_name": "🧠 Zustand",
+      "s_desc": "I use Zustand as a lightweight alternative to Redux — for local or global state without unnecessary complexity. Great for projects where performance and simplicity are important."
+    }
+  ]
+}
+
+}
+ 
