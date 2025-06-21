@@ -14,7 +14,7 @@ import { useState } from 'react'
 function App() {
   const [menu, setMenu] = useState("home");
   return (
-    <>
+    <div className="App">
       <ToastContainer/>
       <Navbar menu={menu} setMenu={setMenu}/>
       <ScrollButton setMenu={setMenu}/>
@@ -24,7 +24,7 @@ function App() {
       <MyWork/>
       <Contact/>
       <Footer/>
-    </>
+    </div>
   )
 }
 

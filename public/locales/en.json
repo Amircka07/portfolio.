@@ -37,6 +37,7 @@
     "leftDesc": "I'm currently available to take on new projects, so feel free to send me a message. You can contact me anytime.",
     "name": "Your Name",
     "email": "Your Email",
+     "onlyLettersPlaceholder": "Only letters",
     "message": "Write your message here",
     "submit": "Submit now",
     "location": "Kyrgyzstan, Bishkek"

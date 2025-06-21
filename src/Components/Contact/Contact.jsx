@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.scss';
 import mail_icon from '../../assets/mail_icon.svg';
 import location_pattern from '../../assets/location_icon.svg';
@@ -8,10 +8,17 @@ import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [namePlaceholder, setNamePlaceholder] = useState(t('contact.name'));
 
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
+    const name = formData.get('name');
+
+    if (!/^[A-Za-zА-Яа-яЁё\s]+$/.test(name)) {
+      toast.error(t('contact.nameValidationMessage'));
+      return;
+    }
 
     formData.append('access_key', '51793f2f-3c8d-43c4-b95d-fbef5d5fef4d');
 
@@ -29,6 +36,19 @@ const Contact = () => {
       console.log('Error', data);
       toast.error(data.message);
     }
+  };
+
+  const handleNameInput = (e) => {
+    const value = e.target.value;
+    const onlyLetters = value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '');
+
+    if (value !== onlyLetters) {
+      setNamePlaceholder(t('contact.onlyLettersPlaceholder'));
+    } else {
+      setNamePlaceholder(t('contact.name'));
+    }
+
+    e.target.value = onlyLetters;
   };
 
   return (
@@ -64,15 +84,32 @@ const Contact = () => {
         </div>
         <form onSubmit={onSubmit} className='contact-right'>
           <label htmlFor='name'>{t('contact.name')}</label>
-          <input type='text' placeholder={t('contact.name')} name='name' />
+          <input
+            type='text'
+            name='name'
+            placeholder={namePlaceholder}
+            pattern='[A-Za-zА-Яа-яЁё\s]+'
+            title={t('contact.nameValidationMessage')}
+            onInput={handleNameInput}
+            required
+          />
+
           <label htmlFor='email'>{t('contact.email')}</label>
-          <input type='email' placeholder={t('contact.email')} name='email' />
+          <input
+            type='email'
+            name='email'
+            placeholder={t('contact.email')}
+            required
+          />
+
           <label htmlFor='message'>{t('contact.message')}</label>
           <textarea
             name='message'
             rows='8'
             placeholder={t('contact.message')}
+            required
           ></textarea>
+
           <button type='submit' className='contact-submit'>
             {t('contact.submit')}
           </button>

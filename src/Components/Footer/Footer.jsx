@@ -6,7 +6,9 @@ const Footer = () => {
 
   return (
     <div className='footer'>
-        <div className="footer-top"/>
+        <div className="footer-top">
+          {/* <h2 className='text'>Спасибо за визит</h2> */}
+        </div>
     </div>
   )
 }
