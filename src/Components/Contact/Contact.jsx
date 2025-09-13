@@ -5,6 +5,8 @@ import location_pattern from '../../assets/location_icon.svg';
 import call from '../../assets/call_icon.svg';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -52,7 +54,12 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='contact'>
+    <motion.div 
+    initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }} // animation fix
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.5}}
+    id='contact' className='contact'>
       <div className='contact-title'>
         <h1>{t('contact.title')}</h1>
       </div>
@@ -115,7 +122,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

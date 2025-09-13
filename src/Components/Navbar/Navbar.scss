@@ -38,6 +38,13 @@
   object-fit: cover;
   margin-left: 50px;
   margin-right: 0;
+  @media (max-width: 1024px) {
+    width: 100px;
+    height: 65px;
+    margin-left: 0;
+    margin-right: 20px;
+    
+  }
 }
 
 .nav-connect:hover {
@@ -89,6 +96,10 @@
 }
 
 .language-dropdown {
+  @media (max-width: 1024px) {
+    left: -10px;
+    
+  }
   position: relative;
   left: 50px;
 

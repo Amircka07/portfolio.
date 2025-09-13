@@ -24,7 +24,9 @@
       "ts": "TypeScript",
       "redux": "Redux Toolkit",
       "zustand": "Zustand",
-      "rq": "React Query"
+      "rq": "React Query",
+      "nex": "Next JS",
+      "vue": "Vue JS"
     }
   },
   "mywork": {

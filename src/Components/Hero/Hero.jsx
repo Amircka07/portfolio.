@@ -2,12 +2,18 @@ import React from 'react';
 import './Hero.scss';
 import profile_img from '../../assets/my-icon .jpg';
 import { useTranslation } from 'react-i18next';
-
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion'
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <div id='home' className='hero'>
+    <motion.div
+     initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.5}}
+    id='home' className='hero'>
       <img src={profile_img} alt='' />
       <h1>
         <span>{t('hero.greeting')}</span> {t('hero.position')}
@@ -34,7 +40,7 @@ const Hero = () => {
           {t('hero.resume')}
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

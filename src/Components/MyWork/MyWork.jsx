@@ -3,12 +3,18 @@ import './MyWork.scss';
 import mywork_data from '../../assets/mywork_data';
 import arrow_icon from '../../assets/arrow_icon.svg';
 import { useTranslation } from 'react-i18next';
-
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion'
 const MyWork = () => {
   const { t } = useTranslation();
 
   return (
-    <div id='work' className='mywork'>
+    <motion.div 
+     initial={{ opacity: 0, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.5}}
+    id='work' className='mywork'>
       <div className='mywork-title'>
         <h1>{t('mywork.title')}</h1>
       </div>
@@ -32,7 +38,7 @@ const MyWork = () => {
           <img className='arrow-icon' src={arrow_icon} alt='' />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

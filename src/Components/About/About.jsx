@@ -2,12 +2,20 @@ import React from 'react';
 import './About.scss';
 import profile_img from '../../assets/my-icon .jpg';
 import { useTranslation } from 'react-i18next';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
+
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div id='about' className='about'>
+    <motion.div 
+    initial={{ opacity: 0, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.5}}
+    id='about' className='about'>
       <div className='about-title'>
         <h1>{t('about.title')}</h1>
       </div>
@@ -40,12 +48,18 @@ const About = () => {
               <p>{t('about.skills.zustand')}</p> <hr style={{ width: '70%' }} />
             </div>
             <div className='about-skill'>
-              <p>{t('about.skills.rq')}</p> <hr style={{ width: '70%' }} />
+              <p>{t('about.skills.rq')}</p> <hr style={{ width: '50%' }} />
+            </div>
+            <div className='about-skill'>
+              <p>{t('about.skills.nex')}</p> <hr style={{ width: '35%' }} />
+            </div>
+             <div className='about-skill'>
+              <p>{t('about.skills.vue')}</p> <hr style={{ width: '30%' }} />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
